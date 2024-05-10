@@ -6,8 +6,9 @@ const PastBooking = ({ bookings }) => {
             <h2 className="text-xl font-bold">🕛️ Past Bookings</h2>
             {bookings &&
                 bookings.length > 0 &&
-                bookings.map((booking) => (
+                bookings.map((booking, i) => (
                     <div
+                        key={i}
                         id={booking.id}
                         className="bg-[#ebf6e9] p-4 rounded-md"
                     >
